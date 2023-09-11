@@ -3,10 +3,9 @@ from flask import Flask, request, abort, jsonify
 from werkzeug.utils import secure_filename
 import tensorflow as tf
 from flask_cors import CORS
-
-from prediction import prediction
-from create_dataset import create_datates
-from get_latest import get_latest_uploads, get_latest_result
+from code.create_dataset import create_datates
+from code.prediction import prediction
+from code.get_latest import get_latest_uploads, get_latest_result
 
 app = Flask(__name__)
 CORS(app)
